@@ -1,0 +1,13 @@
+{
+    "name": "LogStatistic",
+    "alias": "logstatistic",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LogStatistic\\Providers\\LogStatisticServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

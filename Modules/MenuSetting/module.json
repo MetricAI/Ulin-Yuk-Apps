@@ -1,0 +1,13 @@
+{
+    "name": "MenuSetting",
+    "alias": "menusetting",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MenuSetting\\Providers\\MenuSettingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
