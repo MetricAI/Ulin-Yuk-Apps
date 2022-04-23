@@ -1,0 +1,13 @@
+{
+    "name": "TransactionTotal",
+    "alias": "transactiontotal",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TransactionTotal\\Providers\\TransactionTotalServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

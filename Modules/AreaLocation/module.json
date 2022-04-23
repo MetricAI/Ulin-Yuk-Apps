@@ -1,0 +1,13 @@
+{
+    "name": "AreaLocation",
+    "alias": "arealocation",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AreaLocation\\Providers\\AreaLocationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

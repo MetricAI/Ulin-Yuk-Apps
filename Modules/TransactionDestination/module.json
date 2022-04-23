@@ -1,0 +1,13 @@
+{
+    "name": "TransactionDestination",
+    "alias": "transactiondestination",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TransactionDestination\\Providers\\TransactionDestinationServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

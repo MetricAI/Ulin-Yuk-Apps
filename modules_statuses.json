@@ -48,5 +48,14 @@
     "NewsSubCategory": true,
     "Administrator": true,
     "Management": true,
-    "AdministratorCategory": true
+    "AdministratorCategory": true,
+    "AreaLocation": true,
+    "DestinationPlace": true,
+    "CulinaryPlace": true,
+    "Photo": true,
+    "TransactionTotal": true,
+    "TransactionDetail": true,
+    "TransactionDestination": true,
+    "Voucher": true,
+    "DestinationReport": true
 }

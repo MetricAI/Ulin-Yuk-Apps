@@ -1,0 +1,13 @@
+{
+    "name": "DestinationReport",
+    "alias": "destinationreport",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\DestinationReport\\Providers\\DestinationReportServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

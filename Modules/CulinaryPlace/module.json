@@ -1,0 +1,13 @@
+{
+    "name": "CulinaryPlace",
+    "alias": "culinaryplace",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CulinaryPlace\\Providers\\CulinaryPlaceServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,6 +1,29 @@
 @extends('layouts.app')
 @section('title', 'Ubah Role')
 
+@section('nav')
+<div class="row align-items-center">
+    <div class="col">
+        <!-- Page pre-title -->
+        <div class="page-pretitle">
+            Hak Akses
+        </div>
+        <h2 class="page-title">
+            Role
+        </h2>
+    </div>
+    <!-- Page title actions -->
+    <div class="col-auto ms-auto d-print-none">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent p-0 mt-1 mb-0">
+                <li class="breadcrumb-item"><a href="{{ url('') }}"><i data-feather="home" class="breadcrumb-item-icon"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">Hak Akses</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Role</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+@endsection
 
 @section('content')
 <!-- ============================================================== -->
@@ -11,10 +34,53 @@
 <!-- Start Page Content -->
 <!-- ============================================================== -->
 <!-- basic table -->
+<style type="text/css">
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.switch input {
+  display:none;
+}
+.slider {
+  background-color: #FF0000;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
 <div class="row">
     <ol class="breadcrumb bg-transparent">
-                                
-                                <li class="breadcrumb-item"><a href="sysrole">Role</a></li>
+
+                                <li class="breadcrumb-item"><a href="/sysrole">Role</a></li>
                                 <li class="breadcrumb-item active"><a disabled>Ubah Role</a></li>
                             </ol>
 </div>
@@ -32,7 +98,7 @@
                         <h3 class="h3">Daftar Role</h3>
                     </div>
                     <div class="col-md-6">
-                        
+
                     </div>
 
                 </div>
@@ -81,7 +147,6 @@
                                         @php
                                         $checked = "";
                                         $index = array_search('index', $tasks);
-
                                         if(in_array($ids[$index], $roleTasks)) $checked = "checked='checked'";
                                         @endphp
 
@@ -100,7 +165,6 @@
                         @php
                         $checked = "";
                         $index = array_search('create', $tasks);
-
                         if(in_array($ids[$index], $roleTasks)) $checked = "checked='checked'";
                         @endphp
 
@@ -119,7 +183,6 @@
                 @php
                 $checked = "";
                 $index = array_search('view', $tasks);
-
                 if(in_array($ids[$index], $roleTasks)) $checked = "checked='checked'";
                 @endphp
                 <label class="switch" for="checkboxview{{ $ids[$index] }}">
@@ -137,7 +200,6 @@
             @php
             $checked = "";
             $index = array_search('edit', $tasks);
-
             if(in_array($ids[$index], $roleTasks)) $checked = "checked='checked'";
             @endphp
             <label class="switch" for="checkboxedit{{ $ids[$index] }}">
@@ -155,7 +217,6 @@
         @php
         $checked = "";
         $index = array_search('delete', $tasks);
-
         if(in_array($ids[$index], $roleTasks)) $checked = "checked='checked'";
         @endphp
         <label class="switch" for="checkboxdelete{{ $ids[$index] }}">
@@ -177,7 +238,7 @@
 
 <div class="row px-3 py-3">
     <div class="col-md-12 text-end">
-        <button type="submit" class="btn btn-success">Simpan</button>
+        <button type="submit" class="btn btn-success text-white"><i class="fe fe-edit fe-16"></i> Simpan</button>
     </div>
 </div>
 
@@ -197,14 +258,11 @@
 @section('script')
 <script type="text/javascript">
     $('.checkall').click(function () {
-
         if ($(this).is(':checked')) {
             $('.check').prop('checked', true);
         } else {
             $('.check').prop('checked', false);
         }
-
     });
-
 </script>
 @endsection

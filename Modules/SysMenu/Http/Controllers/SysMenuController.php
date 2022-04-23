@@ -40,7 +40,7 @@ class SysMenuController extends Controller
         $menus      = $this->_sysmenuRepository->getAll();
         $parents    = $this->_sysmenuRepository->getAllByParams(['menu_is_sub' => '0']);
         $modules    = $this->_sysmoduleRepository->getAll();
-        
+
         return view('sysmenu::index', compact('menus', 'modules', 'parents'));
     }
 
@@ -169,7 +169,7 @@ class SysMenuController extends Controller
      */
     public function getdata($id){
 
-        $response   = array('status' => 0, 'result' => array()); 
+        $response   = array('status' => 0, 'result' => array());
         $getDetail  = $this->_sysmenuRepository->getById($id);
 
         if ($getDetail) {
